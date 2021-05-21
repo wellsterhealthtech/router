@@ -76,6 +76,9 @@ let createHistory = (source, options) => {
       if (typeof to === "number") {
         source.history.go(to);
       } else {
+        if ((to.startsWith("/")) && (process.env.PUBLIC_URL !== "/"))
+          to = process.env.PUBLIC_URL + to;
+
         state = { ...state, key: Date.now() + "" };
         // try...catch iOS Safari limits to 100 pushState calls
         try {
