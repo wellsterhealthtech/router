@@ -4,12 +4,6 @@
   "description": "Next generation Routing for React.",
   "main": "index.js",
   "module": "es/index.js",
-  "files": [
-    "es",
-    "index.js",
-    "umd",
-    "lib"
-  ],
   "scripts": {
     "build": "node build/build.js",
     "watch": "watch -p \"src/**/*.js\" -c \"yarn build\"",
